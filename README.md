@@ -23,7 +23,6 @@ This will generate the html that you can publish to your hosting provider in the
 $ npm run build
 ```
 
-```
 #### Build Documentation
 Outputs code documentation files to the `./doc/api` folder.
 
@@ -45,14 +44,10 @@ Outputs code coverage files to the `./doc/coverage` folder.
 $ npm run test
 ```
 
-**CURRENT COVERAGE REPORT**
-
-![codecov.io](https://codecov.io/github/defstream/just-copy-hectorgray.com/branch.svg?branch=master)
-
 ### Discuss
 Chat channel:    <a href="https://gitter.im/defstream/just-copy-hectorgray.com"><img src="https://img.shields.io/gitter/room/defstream/just-copy-hectorgray.com.svg" alt="Chat"></a>
 
-Questions or comments can also be posted on the work.flow Github issues page.
+Questions or comments can also be posted on the just-copy-hectory.com Github issues page.
 
 ### Maintainers
 Hector Gray (Twitter: <a href="https://twitter.com/defstream">@defstream</a>)
