@@ -3,4 +3,7 @@ patch:
   'npm:tar:20151103':
     - 'bin-wrapper > download > decompress > decompress-tar > tar':
         patched: '2016-01-04T09:02:34.846Z'
+  'npm:qs:20140806-1':
+    - 'tiny-lr-fork > qs':
+        patched: '2016-01-04T22:14:31.703Z'
 version: v1
