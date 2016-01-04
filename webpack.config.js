@@ -1,25 +1,15 @@
 var webpack = require('webpack');
 
-var commonsPlugin =
-  new webpack.optimize.CommonsChunkPlugin('common.js');
-
 
 
 module.exports = {
   entry: './src/js/app/main.jsx',
   output: {
-    filename: 'js/app.js', //this is the default name, so you can skip it
+    filename: 'js/app-1.0.1.js', //this is the default name, so you can skip it
     path: './src' //path to where webpack will build your stuff
-      //publicPath: "/assets/" //path that will be considered when requiring your files
-      //at this directory our bundle file will be available
-      //make sure port 8090 is used when launching webpack-dev-server
-      //publicPath: '/js'
   },
   module: {
     loaders: [{
-      test: /\.(png|jpg|gif)$/,
-      loader: 'file-loader?path=build/img&name=img/img-[hash:6].[ext]'
-    }, {
       //tell webpack to use jsx-loader for all *.jsx files
       test: /\.jsx$/,
       loader: 'babel',

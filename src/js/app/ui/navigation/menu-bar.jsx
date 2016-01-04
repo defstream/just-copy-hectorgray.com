@@ -11,7 +11,7 @@ var theme = Themes.current();
  * @class MenuBar
  * @description The MenuBar component delivers navigation and header functionality.
  */
-class MenuBar extends React.createClass {
+class MenuBar extends React.Component {
 
 /**
  * creates a section of menu items.

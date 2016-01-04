@@ -1,6 +1,10 @@
 body {
   background-color: rgba(0, 0, 0, .5);
+  background: url(//storage.googleapis.com/www.hectorgray.com/media/sailing.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
+
 video.bg {
   position: fixed;
   top: 50%;
@@ -62,15 +66,24 @@ video.bg {
     height: 56px;
     padding: 0 16px 0 22px;
   }
+  video.bg {
+    display: none !important;
+  }
 }
 @media screen and (max-width:1024px) {
   .mdl-layout__header-row {
     height: 56px;
     padding: 0 16px 0 22px
   }
+  video.bg {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 1024px) {
   .mdl-layout__header {
     display: inherit !important;
+  }
+  video.bg {
+    display: none !important;
   }
 }

@@ -10,7 +10,7 @@ var concat = Function.prototype.call.bind( Array.prototype.concat );
  * @class MenuSection
  * @description Provides a group of menu items with an optional header.
  */
-export default class MenuSection extends React.createClass {
+export default class MenuSection extends React.Component {
   /**
    * @name render
    * @description renders the menu item elements
