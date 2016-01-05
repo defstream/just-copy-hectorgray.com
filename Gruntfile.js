@@ -190,7 +190,6 @@ module.exports = function(grunt) {
           dest: '<%= hgWeb.dist %>',
           src: [
             '.htaccess',
-            'js/*.js',
             '!**/*.DS_Store',
             '*.{ico,txt}',
             '*.html',

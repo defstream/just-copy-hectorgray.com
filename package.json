@@ -12,7 +12,7 @@
   "repository": "https://github.com/defstream/just-copy-hectorgray.com.git",
   "scripts": {
     "doc": "jsdoc -R ./README.md -r -d ./doc/api ./src/js/app",
-    "test": "snyk test && istanbul cover --dir ./doc/coverage _mocha -- --recursive",
+    "test": "istanbul cover --dir ./doc/coverage _mocha -- --recursive",
     "analyze": "plato -d ./doc/analysis -r ./lib ./src/js/main.njsx",
     "dev": "webpack-dev-server -d --progress --colors --port 8090 --watch",
     "build": "grunt build && webpack --optimize-minimize --optimize-occurence-order --optimize-dedupe",
