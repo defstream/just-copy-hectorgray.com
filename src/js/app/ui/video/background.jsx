@@ -14,7 +14,7 @@ class VideoBackground extends React.Component {
  * @return {ReactNode} The video element
  */
   render(){
-    return <video className='video-background' preload autoPlay loop poster={this.props.poster}><source src={this.props.src} type={this.props.type}/></video>;
+    return <video className='video-background' preload muted autoPlay loop poster={this.props.poster}><source src={this.props.src} type={this.props.type}/></video>;
   }
 }
 

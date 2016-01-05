@@ -30,8 +30,6 @@ class MenuBar extends React.Component {
  * @return {ReactNode} The menu bar
  */
   render(){
-    document.title = this.props.title;
-
     return <div>
       <div className={theme.CSS['header-row']}>
         <button className={theme.CSS['header-row-menu']} id="main-menu">
@@ -40,7 +38,7 @@ class MenuBar extends React.Component {
         <ul className={theme.CSS['menu']} htmlFor="main-menu">
           {this.props.sections.map(this.menuSection)}
         </ul>
-        <span className={theme.CSS['title']}>{this.props.title}</span>
+        <span className={theme.CSS['title']}>{this.props.header.text}</span>
       </div>
     </div>;
   }
@@ -49,12 +47,11 @@ class MenuBar extends React.Component {
 //@info Get the element from the DOM
 var element = DOM.first(DOM.tag('menu'));
 
-//@info Read the menu settings from the DOM.
-var menu = DOM.navigation.menuBar(element);
-
 //@info Render the Menu Bar
 if(element) {
-  ReactDOM.render(< MenuBar title={menu.title} sections={menu.sections} />, element);
+  //@info Read the menu settings from the DOM.
+  var menu = DOM.navigation.menuBar(element);
+  ReactDOM.render(< MenuBar header={menu.header} sections={menu.sections} />, element);
 }
 
 //@export {MenuBar}
