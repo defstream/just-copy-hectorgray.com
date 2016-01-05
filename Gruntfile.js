@@ -37,6 +37,7 @@ module.exports = function(grunt) {
           '{.tmp,<%= hgWeb.app %>}/css/{,*/}*.css',
           '<%= hgWeb.app %>/media/{,*/}*.*',
           '<%= hgWeb.app %>/vendor/{,*/}*.*',
+          '<%= hgWeb.app %>/ico/{,*/}*.*',
           '<%= hgWeb.app %>/img/{,*/}*.{png,jpg,jpeg,gif,webp}'
         ]
       },
@@ -194,6 +195,7 @@ module.exports = function(grunt) {
             '*.{ico,txt}',
             '*.html',
             'css/**',
+            'ico/**',
             'vendor/**',
             'media/**',
             '!css/**/*.scss',
