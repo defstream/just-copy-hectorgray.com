@@ -1,5 +1,7 @@
 'use strict';
-
+/**
+ * The Default "MDL" Theme
+ */
 export default {
   CSS: {
     'headliner': 'mdl-layout headliner',

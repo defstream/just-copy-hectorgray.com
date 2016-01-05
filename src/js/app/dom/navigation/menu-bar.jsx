@@ -2,11 +2,12 @@ import all from '../all';
 import first from '../first';
 
 /**
- * menuBar - Parses the menu bar from the dom element.
+ * @function menuBar
+ * @description Parses the menu bar from the dom element.
  * @param  {HtmlElement} element The dom element to parse.
  * @return {MenuBarElement}  { title: String, header: String, sections: MenuSection[] }
  */
-export default function menuBar(element) {
+export default function menuBar(element=document) {
   return {
     title: getTitle(element),
     header: getHeader(element),
@@ -14,7 +15,8 @@ export default function menuBar(element) {
   };
 }
 /**
- * parses a 'menu-item' from the DOM.
+ * @function getMenuItem
+ * @description parses a 'menu-item' from the DOM.
  * @param  {Object} element The 'menu-item' DOM element.
  * @return {MenuItemElement} { icon: String, href: String, text: String }
  */
@@ -27,7 +29,8 @@ function getMenuItem(element) {
   };
 }
 /**
- * parses a 'menu-section' from the DOM.
+ * @function getMenuSection
+ * @description parses a 'menu-section' from the DOM.
  * @param  {Object} element The 'menu-item' DOM element.
  * @return {MenuSectionElement} { header: String, items: MenuItemElement[] }
  */
@@ -39,7 +42,8 @@ function getMenuSection(element)  {
   };
 }
 /**
- * parses the 'menu-section's from the DOM.
+ * @function getMenuSections
+ * @description parses the 'menu-section's from the DOM.
  * @param  {Object} element The 'menu-section' DOM element.
  * @return {MenuSectionElement[]}
  */
@@ -49,7 +53,8 @@ function getMenuSections(element) {
   return menuSections.map(getMenuSection);
 }
 /**
- * parses the 'title' attribute from the DOM.
+ * @function getTitle
+ * @description parses the 'title' attribute from the DOM.
  * @param  {Object} element The DOM element to parse.
  * @return {String}
  */
@@ -58,7 +63,8 @@ function getTitle(element) {
   return element.getAttribute('title');
 }
 /**
- * parses the 'text' attribute from the DOM.
+ * @function getText
+ * @description parses the 'text' attribute from the DOM.
  * @param  {Object} element The DOM element to parse.
  * @return {String}
  */
@@ -67,7 +73,8 @@ function getText(element) {
   return element.getAttribute('text');
 }
 /**
- * parses the 'header' element from the DOM.
+ * @function getHeader
+ * @description parses the 'header' element from the DOM.
  * @param  {Object} element The 'header' DOM element to parse.
  * @return {MenuHeaderElement} { text: String }
  */

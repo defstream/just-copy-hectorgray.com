@@ -4,7 +4,8 @@ import DOM from './dom';
 import Themes from './ui/themes';
 import MenuBar from './ui/navigation/menu-bar';
 import Polyfills from './polyfills';
-
+import VideoBackground from './ui/video/background';
+import GoogleAnalytics from './elements/tracking/google/page-view';
 /**
  * The main application component
  */

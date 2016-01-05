@@ -5,7 +5,7 @@ body {
   background-position: center;
 }
 
-video.bg {
+.video-background {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -66,7 +66,7 @@ video.bg {
     height: 56px;
     padding: 0 16px 0 22px;
   }
-  video.bg {
+  .video-background {
     display: none !important;
   }
 }
@@ -75,7 +75,7 @@ video.bg {
     height: 56px;
     padding: 0 16px 0 22px
   }
-  video.bg {
+  .video-background {
     display: none !important;
   }
 }
@@ -83,7 +83,7 @@ video.bg {
   .mdl-layout__header {
     display: inherit !important;
   }
-  video.bg {
+  .video-background {
     display: none !important;
   }
 }
