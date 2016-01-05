@@ -1,4 +1,6 @@
 # hectorgray.com
+
+[![Join the chat at https://gitter.im/defstream/just-copy-hectorgray.com](https://badges.gitter.im/defstream/just-copy-hectorgray.com.svg)](https://gitter.im/defstream/just-copy-hectorgray.com?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 This is the website for http://www.hectorgray.com, updates to master are automatically deployed to www.hectorgray.com. Pull requests are welcome ( Even if you are not Hector Gray :).
 
 
