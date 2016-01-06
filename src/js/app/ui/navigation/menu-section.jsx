@@ -37,6 +37,13 @@ export default class MenuSection extends React.Component {
    */
   open() {
     if(this.href && window) {
+      if(ga) {
+        ga('send', 'event', {
+          'eventCategory': 'MenuItem',
+          'eventAction': 'Click',
+          'eventLabel': this.text
+        });
+      }
       window.open(this.href, '_BLANK');
     }
   }
