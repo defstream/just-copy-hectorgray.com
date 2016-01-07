@@ -8,21 +8,26 @@ import DOM from '../../../dom';
  */
 class GoogleAnalytics extends React.Component {
 
-  createTag(id) {
-    const ga = document.createElement('script');
-    ga.async = true;
-    ga.type = 'text/javacsript';
-    ga.src = '//www.google-analytics.com/analytics.js';
-    var head = DOM.first(DOM.tag('body'));
-    if(head) {
-      head.appendChild(ga);
-    }
-    window.ga('create', id, 'auto');
+  initialize(id) {
+    if(window.googleAnalytics) return;
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'googleAnalytics');
+    window.googleAnalytics = googleAnalytics;
+    window.googleAnalytics('create', id, 'auto');
   }
 
   componentDidMount() {
-    this.createTag(this.props.id);
-    window.ga('send', 'pageview');
+    this.initialize(this.props.id);
+    return window.googleAnalytics('send', 'pageview');
   }
 
 /**
@@ -30,16 +35,21 @@ class GoogleAnalytics extends React.Component {
  * @return {ReactNode} The menu bar
  */
   render(){
-    return <script></script>;
+    return null;
   }
 }
 
-var element = DOM.first(DOM.tag('google-page-view'));
-if(element&&!window.ga){
-  window.ga = window.ga || function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date; // eslint-disable-line
-  var id = DOM.attr('id', element);
-  //@info Render the element
-  ReactDOM.render(< GoogleAnalytics id={id}/>, element);
-}
-//@export {GoogleAnalytics}
-export default GoogleAnalytics;
+document.addEventListener('DOMContentLoaded', function(event) {
+  var element = DOM.first(DOM.tag('google-page-view'));
+  if(element){
+    var id = DOM.attr('id', element);
+    ReactDOM.render(< GoogleAnalytics id={id} />, element);
+  }
+});
+
+//@export {Function}
+export default function send(event, data) {
+  if(window.googleAnalytics) {
+    return window.googleAnalytics('send', event, data);
+  }
+};

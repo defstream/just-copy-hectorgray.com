@@ -5,7 +5,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: './src/js/app/main.jsx',
   output: {
-    filename: 'js/app-1.0.3.js', //this is the default name, so you can skip it
+    filename: 'js/app-1.0.4.js', //this is the default name, so you can skip it
     path: './build' //path to where webpack will build your stuff
   },
   module: {

@@ -1,6 +1,5 @@
 # hectorgray.com
-This is the website for http://www.hectorgray.com, updates to master are automatically deployed to www.hectorgray.com. Pull requests are welcome ( Even if you are not Hector Gray :).
-
+This is the website for http://www.hectorgray.com, updates to master are automatically deployed to www.hectorgray.com. Pull requests are welcome ( even if you are not Hector Gray ).
 
 # Installation
 If you wish to use this for your own site, don't go throw the trouble of just scraping & pasting. Just install and update the index.html, then deploy to your own hosting provider.

@@ -2,10 +2,12 @@
 
 import DOM from './dom';
 import Themes from './ui/themes';
-import MenuBar from './ui/navigation/menu-bar';
 import Polyfills from './polyfills';
+
+import MenuBar from './ui/navigation/menu-bar';
 import VideoBackground from './ui/video/background';
 import GoogleAnalytics from './elements/tracking/google/page-view';
+
 /**
  * The main application component
  */

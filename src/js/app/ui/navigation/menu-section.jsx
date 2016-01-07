@@ -1,6 +1,7 @@
 'use strict';
 
 import Themes from '../themes';
+import googleAnalytics from '../../elements/tracking/google/page-view';
 import Polyfills from '../../polyfills';
 
 var theme = Themes.current();
@@ -37,14 +38,12 @@ export default class MenuSection extends React.Component {
    */
   open() {
     if(this.href && window) {
-      if(ga) {
-        ga('send', 'event', {
-          'eventCategory': 'MenuItem',
-          'eventAction': 'Click',
-          'eventLabel': this.text
-        });
-      }
-      window.open(this.href, '_BLANK');
+      window.open(this.href, '_NEW');
+      googleAnalytics('event', {
+        'eventCategory': 'MenuItem',
+        'eventAction': 'Click',
+        'eventLabel': this.text
+      });
     }
   }
 /**
