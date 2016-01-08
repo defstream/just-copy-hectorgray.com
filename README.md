@@ -1,5 +1,5 @@
 # hectorgray.com
-This is the website for http://www.hectorgray.com, updates to master are automatically deployed to www.hectorgray.com. All pull requests are welcome.
+This is the React JS web application for www.hectorgray. All pull requests are welcome.
 
 # Installation
 If you wish to use this for your own site, don't go throw the trouble of just scraping & pasting. Just install and update the index.html, then deploy to your own hosting provider. The components section details the elements within the index.html that you should update to customize this site for you.
@@ -12,11 +12,9 @@ $ npm install just-copy-hectorgray.com <FolderToInstallToWebsite>
 
 ### menu-bar
 
-The menu bar represents the
-#### properties
-
-
 ### menu-section
+
+### menu-item
 
 ### video-background
 
