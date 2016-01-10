@@ -22,7 +22,7 @@ class Main extends React.Component {
 }
 
 //@info Retrieve the HTML element to bind to.
-var element = DOM.first(DOM.tag('main'));
+var element = DOM.first(DOM.tag('main-window'));
 
 //@info Render the element.
 if (element) {
