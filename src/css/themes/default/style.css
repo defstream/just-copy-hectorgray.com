@@ -1,6 +1,6 @@
 body {
   background-color: #8295a8;
-  background: url(//storage.googleapis.com/www.hectorgray.com/media/sailing.jpg) no-repeat;
+  background: url(//storage.googleapis.com/www.hectorgray.com/media/constant-coder.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -20,7 +20,7 @@ body {
   transform: translateX(-50%) translateY(-50%);
   background-color: #8295a8;
 
-  background: url(/media/sailing.jpg) no-repeat;
+  background: url(/media/constant-coder.jpg) no-repeat;
   background-size: cover;
 }
 .li {
